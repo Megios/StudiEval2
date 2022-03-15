@@ -1,0 +1,16 @@
+.deFormat{
+  background-color: bisque;
+  width : 200px;
+  height: 200px;
+  border-radius: 20px;
+}
+.h-33{
+  background-color: bisque(156, 91, 105);
+}
+.deScore1{
+  height: 30px; 
+  width: 30px; 
+  background-color: rgb(0, 0, 0);
+  border: 5px solid rgba(0, 0, 0, 1);
+  border-radius: 50%;
+}
