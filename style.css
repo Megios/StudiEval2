@@ -7,7 +7,38 @@
 .deScore1{
   height: 30px; 
   width: 30px; 
-  background-color: rgb(0, 0, 0);
-  border: 5px solid rgba(0, 0, 0, 1);
+  background-color: brown;
+  border: 5px solid brown;
   border-radius: 50%;
 }
+.container-fluid{
+  background: rgba(255, 209, 149, 0.849);
+  color: brown;
+}
+#butP1,#butP2{
+  margin: 20px;
+}
+.btn-successs{
+  background-color: brown;
+  border-color: black;
+  color: rgba(255, 209, 149, 0.849);
+}
+.btn-successs:hover{
+  background: rgba(255, 209, 149, 0.849);
+  border-color: black;
+  color: brown;
+}
+.btn-infos{
+  background: rgba(255, 209, 149, 0.849);
+  border-color: black;
+  color: brown;
+}
+.btn-infos:hover{
+  color: rgba(255, 209, 149, 0.849);
+  background-color: brown;
+  border-color: black;
+}
+h1{
+  margin: 30px;
+}
+

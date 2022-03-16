@@ -5,8 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jeu de Dée</title>
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="../../../Working_Space/Eval/Tools/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container-fluid">
@@ -16,18 +16,18 @@
     </div>
 
     <div class="row ">
-      <div class="col-12 col-md-4 text-center mx-auto" style="background-color: rgb(96, 34, 148);">
+      <div class="col-12 col-md-4 text-center mx-auto" >
         <div class="form-group">
           <label for="forjoueur1"><h1 id="joueur1"> PLAYER 1</h1></label>
           <input type="text" class="form-control" id="forjoueur1">
-          <button class="btn btn-success" id="butP1">Modifier</button>
+          <button class="btn btn-successs" id="butP1">Modifier</button>
         </div>
         <h3>Round</h3>
         <h3 id="scoreP1">0</h3>
-        <h1>Score</h1>
-        <h1 id="stockP1"></h1>
+        <h2>Score</h2>
+        <h2 id="stockP1">0</h2>
       </div>
-      <div class=" col-12 col-md-2 text-center" style="background-color: #e05050;min-width: 240px;"> 
+      <div class=" col-12 col-md-2 text-center" style="min-width: 240px;"> 
         <h1>Au tour de  <span id="tourP"> PLAYER 1</span></h1>
         <div class="shadow d-flex flex-column justify-content-around deFormat m-auto" id="deStyle">
           <svg xmlns="http://www.w3.org/2000/svg" width="80%" height="80%" fill="currentColor" class="bi bi-yin-yang m-auto" viewBox="0 0 16 16">
@@ -35,21 +35,21 @@
             <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1 8a7 7 0 0 1 7-7 3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 0 0 7 7 7 0 0 1-7-7Zm7 4.667a1.167 1.167 0 1 1 0-2.334 1.167 1.167 0 0 1 0 2.334Z"/>
           </svg>
         </div>
-        <button type="button" class="btn btn-info m-3" id="jouer">lancer</button>
-        <button type="button" class="btn btn-info m-3" id="reset">reset</button>
+        <button type="button" class="btn btn-infos m-3" id="jouer">lancer</button>
+        <button type="button" class="btn btn-infos m-3" id="reset">reset</button>
         <br>
         <button type="button" class="btn btn-danger m-3" id="cash">Mettre en score</button>
       </div>
-      <div class="col-12 col-md-4 text-center mx-auto" style="background-color: #308034;">
+      <div class="col-12 col-md-4 text-center mx-auto" >
         <div class="form-group">
           <label for="forjoueur2"><h1 id="joueur2"> PLAYER 2</h1></label>
           <input type="text" class="form-control" id="forjoueur2">
-          <button class="btn btn-success" id="butP2">Modifier</button>
+          <button class="btn btn-successs" id="butP2">Modifier</button>
         </div>
         <h3>Round</h3>
         <h3 id="scoreP2">0</h3>
         <h2>Score</h2>
-        <h2 id="stockP2"></h2>
+        <h2 id="stockP2">0</h2>
       </div>
     </div>
 
