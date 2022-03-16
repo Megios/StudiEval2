@@ -20,18 +20,12 @@
       <div class="col-4" style="background-color: rgb(96, 34, 148);"></div>
       <div class="col-2" style="background-color: #e05050;"> 
         <h1>TEST</h1>
-        <div class="d-flex flex-column justify-content-around deFormat">
-          <div class="h-33 d-flex justify-content-end mr-3">
-            <button class="deScore1"></button>
-          </div>
-          <div class="h-33 d-flex justify-content-around">
-            <button class="deScore1"></button>
-          </div>
-          <div class="h-33 d-flex justify-content-left ml-3">
-            <button class="deScore1"></button>
-          </div>
+        <div class="d-flex flex-column justify-content-around deFormat" id="deStyle">
+            <div class="d-flex justify-content-around">
+              <button class="deScore1" type=disabled >
+            </div>
         </div>
-        <button type="button" class="btn btn-info">Lancer le Dés</button>
+        <button type="button" class="btn btn-info" id="jouer">Lancer le Dés</button>
       </div>
       <div class="col-4" style="background-color: #308034;"></div>
       <div class="col-1" style="background-color: rgb(146, 133, 16);"></div>
@@ -40,7 +34,7 @@
 
     </div>
   </div>
-
+  <script src="../../../tools/jquery-3.6.0.min.js"></script>
   <script src="lancer.js"></script>
 </body>
 </html>
