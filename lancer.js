@@ -91,6 +91,11 @@ class JetD{
     this.point=0
     this.player=1
   }
+  resetComplet(){
+    this.reset()
+    this.stock1=0
+    this.stock2=0
+  }
   switchP(){
     if (this.player===1) this.player=2;
     else this.player=1;
@@ -98,19 +103,29 @@ class JetD{
   
 }
 $(document).ready(() => {
-  alert('Bienvenu')
+  //Initialisation différente variable
   let jetD = new JetD();
+  // Button principaux
   const startB = document.getElementById('jouer');
-  let name1= document.getElementById('joueur1');
-  let name2= document.getElementById('joueur2');
   const reset = document.getElementById('reset');
-  const player1=document.getElementById('scoreP1');
-  const player2=document.getElementById('scoreP2');
+  const butPs= document.getElementById('cash')
   const butP2 = document.getElementById('butP2');
   const butP1 = document.getElementById('butP1');
-  const butPs= document.getElementById('cash')
+
+  //affichage
   let tourP= document.getElementById('tourP');
+  let score1= document.getElementById('stockP1')
+  let score2= document.getElementById('stockP2')
+  const player1=document.getElementById('scoreP1');
+  const player2=document.getElementById('scoreP2');
+
+  // Joueur
+  let name1= document.getElementById('joueur1');
+  let name2= document.getElementById('joueur2');
+
+  // DE
   let deHTML = document.getElementById('deStyle');
+
   deHTML.innerHTML= base
   startB.addEventListener('click', () => {
     jetD = RollDice(jetD)
@@ -175,27 +190,40 @@ $(document).ready(() => {
       }
     }, 1000);
   });
+
+  //Bouton reset
+
   reset.addEventListener('click', () => {
     deHTML.innerHTML=base;
-    jetD.reset();
+    jetD.resetComplet();
     player1.innerHTML=jetD.score;
     player2.innerHTML=jetD.score;
-
+    name1.innerHTML= 'player 1';
+    name2.innerHTML= 'player 2'
+    score1.innerHTML= '0'
+    score2.innerHTML= '0'
+    tourP.innerHTML= name1.innerHTML
+    document.getElementById("forjoueur2").value=''
+    document.getElementById("forjoueur1").value=''
   })
+
+  // modification playeur 2
 
   butP2.addEventListener('click', () =>{
     var input = document.getElementById("forjoueur2").value;
     name2.innerText= input;
     if (jetD.player===2) tourP.innerHTML= name2.innerHTML
   })
+  // modification du playeur 1
+
   butP1.addEventListener('click', () =>{
     var input = document.getElementById("forjoueur1").value;
     name1.innerText= input;
     if (jetD.player===1) tourP.innerHTML= name1.innerHTML
   })
 
-  let score1= document.getElementById('stockP1')
-  let score2= document.getElementById('stockP2')
+  // Mise en score
+  
   butPs.addEventListener('click', () =>{
     
     if (jetD.player===1) {
