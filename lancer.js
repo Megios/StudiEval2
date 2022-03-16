@@ -43,13 +43,13 @@ let lancer4=`
 `
 
 let lancer3=`
-  <div class="h-33 d-flex justify-content-end mr-3">
+  <div class="d-flex justify-content-end m-3">
     <button class="deScore1"></button>
   </div>
   <div class="h-33 d-flex justify-content-around">
     <button class="deScore1"></button>
   </div>
-  <div class="h-33 d-flex justify-content-left ml-3">
+  <div class="h-33 d-flex justify-content-start m-3">
     <button class="deScore1"></button>
   </div>
 `
