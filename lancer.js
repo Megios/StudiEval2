@@ -193,12 +193,24 @@ $(document).ready(() => {
     name1.innerText= input;
     if (jetD.player===1) tourP.innerHTML= name1.innerHTML
   })
+
+  let score1= document.getElementById('stockP1')
+  let score2= document.getElementById('stockP2')
   butPs.addEventListener('click', () =>{
-    console.log('click stock')
+    
     if (jetD.player===1) {
       jetD.stock1+=jetD.score;
+      score1.innerHTML=jetD.stock1;
+      jetD.switchP();
+      tourP.innerHTML= name2.innerHTML;
+      jetD.score=0;
+
     }else{
-      jetD.stock2+=jetD.score
+      jetD.stock2+=jetD.score;
+      score2.innerHTML=jetD.stock2;
+      jetD.switchP();
+      tourP.innerHTML= name1.innerHTML;
+      jetD.score=0;
     }
   })
 })
