@@ -83,10 +83,13 @@ class JetD{
     this.score=0
     this.point=0
     this.player=1
+    this.stock1=0
+    this.stock2=0
   }
   reset(){
     this.score=0
     this.point=0
+    this.player=1
   }
   switchP(){
     if (this.player===1) this.player=2;
@@ -97,12 +100,15 @@ class JetD{
 $(document).ready(() => {
   alert('Bienvenu')
   let jetD = new JetD();
-  jetD.score =0;
-  jetD.point = 0;
   const startB = document.getElementById('jouer');
+  let name1= document.getElementById('joueur1');
+  let name2= document.getElementById('joueur2');
   const reset = document.getElementById('reset');
   const player1=document.getElementById('scoreP1');
   const player2=document.getElementById('scoreP2');
+  const butP2 = document.getElementById('butP2');
+  const butP1 = document.getElementById('butP1');
+  const butPs= document.getElementById('cash')
   let tourP= document.getElementById('tourP');
   let deHTML = document.getElementById('deStyle');
   deHTML.innerHTML= base
@@ -158,13 +164,13 @@ $(document).ready(() => {
         player1.innerHTML=jetD.score;
         if (jetD.point===1) {
           jetD.switchP();
-          tourP.innerHTML= 'Player 2'
+          tourP.innerHTML= name2.innerHTML
         }
       } else{
         player2.innerHTML=jetD.score;
         if (jetD.point===1) {
           jetD.switchP();
-          tourP.innerHTML= 'Player 1';
+          tourP.innerHTML= name1.innerHTML
         }
       }
     }, 1000);
@@ -172,6 +178,27 @@ $(document).ready(() => {
   reset.addEventListener('click', () => {
     deHTML.innerHTML=base;
     jetD.reset();
-    console.log(`Round actuel : ${jetD.score}`)
+    player1.innerHTML=jetD.score;
+    player2.innerHTML=jetD.score;
+
+  })
+
+  butP2.addEventListener('click', () =>{
+    var input = document.getElementById("forjoueur2").value;
+    name2.innerText= input;
+    if (jetD.player===2) tourP.innerHTML= name2.innerHTML
+  })
+  butP1.addEventListener('click', () =>{
+    var input = document.getElementById("forjoueur1").value;
+    name1.innerText= input;
+    if (jetD.player===1) tourP.innerHTML= name1.innerHTML
+  })
+  butPs.addEventListener('click', () =>{
+    console.log('click stock')
+    if (jetD.player===1) {
+      jetD.stock1+=jetD.score;
+    }else{
+      jetD.stock2+=jetD.score
+    }
   })
 })
