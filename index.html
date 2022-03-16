@@ -15,20 +15,36 @@
       
     </div>
 
-    <div class="row " style="background-color: rgb(0, 0, 0);">
-      <div class="col-1" style="background-color: aliceblue;"></div>
-      <div class="col-4" style="background-color: rgb(96, 34, 148);"></div>
-      <div class="col-2" style="background-color: #e05050;"> 
-        <h1>TEST</h1>
-        <div class="d-flex flex-column justify-content-around deFormat" id="deStyle">
-            <div class="d-flex justify-content-around">
-              <button class="deScore1" type=disabled >
-            </div>
+    <div class="row ">
+      <div class="col-12 col-md-4 text-center mx-auto" style="background-color: rgb(96, 34, 148);">
+        <div class="form-group">
+          <label for="forjoueur1"><h1 id="joueur1"> PLAYER 1</h1></label>
+          <input type="text" class="form-control" id="forjoueur1">
+          <button class="btn btn-success">Modifier</button>
         </div>
-        <button type="button" class="btn btn-info" id="jouer">Lancer le Dés</button>
+        <h2>Score</h2>
+        <h2 id="scoreP1">0</h2>
       </div>
-      <div class="col-4" style="background-color: #308034;"></div>
-      <div class="col-1" style="background-color: rgb(146, 133, 16);"></div>
+      <div class=" col-12 col-md-2 text-center" style="background-color: #e05050;min-width: 240px;"> 
+        <h1>Au tour de : <span id="tourP"> PLAYER 1</span></h1>
+        <div class="shadow d-flex flex-column justify-content-around deFormat m-auto" id="deStyle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="80%" height="80%" fill="currentColor" class="bi bi-yin-yang m-auto" viewBox="0 0 16 16">
+            <path d="M9.167 4.5a1.167 1.167 0 1 1-2.334 0 1.167 1.167 0 0 1 2.334 0Z"/>
+            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1 8a7 7 0 0 1 7-7 3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 0 0 7 7 7 0 0 1-7-7Zm7 4.667a1.167 1.167 0 1 1 0-2.334 1.167 1.167 0 0 1 0 2.334Z"/>
+          </svg>
+        </div>
+        <button type="button" class="btn btn-info m-3" id="jouer">lancer</button>
+        <button type="button" class="btn btn-info m-3" id="reset">reset</button>
+      </div>
+      <div class="col-12 col-md-4 text-center mx-auto" style="background-color: #308034;">
+        <div class="form-group">
+          <label for="forjoueur2"><h1 id="joueur2"> PLAYER 2</h1></label>
+          <input type="text" class="form-control" id="forjoueur2">
+          <button class="btn btn-success">Modifier</button>
+        </div>
+        <h2>Score</h2>
+        <h2 id="scoreP2">0</h2>
+      </div>
     </div>
 
 

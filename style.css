@@ -1,11 +1,8 @@
 .deFormat{
-  background-color: bisque;
+  background-color: rgb(240, 238, 236);
   width : 200px;
   height: 200px;
   border-radius: 20px;
-}
-.h-33{
-  background-color: bisque(156, 91, 105);
 }
 .deScore1{
   height: 30px; 
